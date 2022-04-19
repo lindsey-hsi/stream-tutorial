@@ -13,7 +13,7 @@ const api = express();
 
 // api.use(cors());
 api.use(cors({
-    origin: '*',
+    origin: 'https://celadon-llama-ce8ee1.netlify.app',
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 api.use(compression());
