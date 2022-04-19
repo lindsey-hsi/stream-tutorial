@@ -12,7 +12,7 @@ dotenv.config();
 const api = express();
 
 // api.use(cors());
-app.use(cors({
+api.use(cors({
     origin: 'https://celadon-llama-ce8ee1.netlify.app'
 }));
 api.use(compression());
