@@ -12,10 +12,10 @@ dotenv.config();
 const api = express();
 
 // api.use(cors());
-api.use(cors({
-    origin: '*',
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}));
+// api.use(cors({
+//     origin: '*',
+//     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+// }));
 api.use(compression());
 api.use(helmet());
 api.use(bodyParser.urlencoded({ extended: true }));
