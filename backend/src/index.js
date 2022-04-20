@@ -10,21 +10,21 @@ import compression from 'compression';
 dotenv.config();
 
 var api = express();
-var headers = {
-  'Accept': 'application/json',
-  'Content-Type': 'application/json',
-  'Access-Control-Allow-Origin': 'https://celadon-llama-ce8ee1.netlify.app',
-  'Access-Control-Allow-Methods': 'POST,GET',
-  // 'Access-Control-Allow-Headers': 'Content-Type',
-  // 'Access-Control-Max-Age': '86400',
-};
+// var headers = {
+//   'Accept': 'application/json',
+//   'Content-Type': 'application/json',
+//   'Access-Control-Allow-Origin': 'https://celadon-llama-ce8ee1.netlify.app',
+//   'Access-Control-Allow-Methods': 'POST,GET',
+//   // 'Access-Control-Allow-Headers': 'Content-Type',
+//   // 'Access-Control-Max-Age': '86400',
+// };
 
-var corsOptions = {
-  origin: 'https://celadon-llama-ce8ee1.netlify.app',
-  headers: headers,
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-// app.use(cors())
+// var corsOptions = {
+//   origin: 'https://celadon-llama-ce8ee1.netlify.app',
+//   headers: headers,
+//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }
+app.use(cors())
 // app.get('https://celadon-llama-ce8ee1.netlify.app', function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for only example.com.'})
 // })
@@ -35,7 +35,7 @@ var corsOptions = {
 //   });
 // });
 // api.options('https://celadon-llama-ce8ee1.netlify.app/v1/authenticate', cors())
-api.use(cors(corsOptions));
+// api.use(cors(corsOptions));
 // api.use(cors({
 //     origin: 'https://celadon-llama-ce8ee1.netlify.app',
 //     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
