@@ -18,7 +18,6 @@ export const post = (url, body, maybeAuth) => {
       method: "POST",
       headers: headers,
       body: JSON.stringify(body)
-    })
-      .then(res => res.json())
+    }).then(res => res.json())
 
 };
