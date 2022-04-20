@@ -17,7 +17,7 @@ export const post = (url, body, maybeAuth) => {
       mode: 'no-cors',
       method: "POST",
       headers: headers,
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
     }).then(res => res.json())
 
 };
