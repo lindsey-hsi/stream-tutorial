@@ -9,14 +9,14 @@ import compression from 'compression';
 
 dotenv.config();
 
-const api = express();
+var api = express();
 
-// var corsOptions = {
-//   origin: 'https://celadon-llama-ce8ee1.netlify.app',
-//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// }
+var corsOptions = {
+  origin: 'https://celadon-llama-ce8ee1.netlify.app',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
-// app.get('https://celadon-llama-ce8ee1.netlify.app', cors(), function (req, res, next) {
+// app.get('https://celadon-llama-ce8ee1.netlify.app', cors(corsOptions), function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for only example.com.'})
 // })
 // api.get("/no-cors", (req, res) => {
@@ -26,7 +26,7 @@ const api = express();
 //   });
 // });
 // api.options('https://celadon-llama-ce8ee1.netlify.app/v1/authenticate', cors())
-api.use(cors());
+api.use(cors(corsOptions));
 // api.use(cors({
 //     origin: 'https://celadon-llama-ce8ee1.netlify.app',
 //     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
