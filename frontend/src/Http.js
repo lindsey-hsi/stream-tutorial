@@ -14,7 +14,7 @@ export const post = (url, body, maybeAuth) => {
 
 
     return fetch(url, {
-      mode: 'no-cors'
+      mode: 'no-cors',
       method: "POST",
       headers: headers,
       body: JSON.stringify(body)
