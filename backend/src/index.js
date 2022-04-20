@@ -26,11 +26,11 @@ const api = express();
 //   });
 // });
 // api.options('https://celadon-llama-ce8ee1.netlify.app/v1/authenticate', cors())
-// api.use(cors());
-api.use(cors({
-    origin: 'https://celadon-llama-ce8ee1.netlify.app',
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}));
+api.use(cors());
+// api.use(cors({
+//     origin: 'https://celadon-llama-ce8ee1.netlify.app',
+//     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+// }));
 api.use(compression());
 api.use(helmet());
 api.use(bodyParser.urlencoded({ extended: true }));
