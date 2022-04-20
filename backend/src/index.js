@@ -9,16 +9,16 @@ import compression from 'compression';
 
 dotenv.config();
 
-var api = express();
+const api = express();
 
 // var corsOptions = {
 //   origin: 'https://celadon-llama-ce8ee1.netlify.app',
 //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 // }
 
-app.get('https://celadon-llama-ce8ee1.netlify.app', cors(), function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for only example.com.'})
-})
+// app.get('https://celadon-llama-ce8ee1.netlify.app', cors(), function (req, res, next) {
+//   res.json({msg: 'This is CORS-enabled for only example.com.'})
+// })
 // api.get("/no-cors", (req, res) => {
 //   console.info("GET /no-cors");
 //   res.json({
@@ -27,10 +27,10 @@ app.get('https://celadon-llama-ce8ee1.netlify.app', cors(), function (req, res, 
 // });
 // api.options('https://celadon-llama-ce8ee1.netlify.app/v1/authenticate', cors())
 // api.use(cors());
-// api.use(cors({
-//     origin: 'https://celadon-llama-ce8ee1.netlify.app',
-//     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-// }));
+api.use(cors({
+    origin: 'https://celadon-llama-ce8ee1.netlify.app',
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 api.use(compression());
 api.use(helmet());
 api.use(bodyParser.urlencoded({ extended: true }));
