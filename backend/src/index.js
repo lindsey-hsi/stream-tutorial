@@ -11,7 +11,13 @@ dotenv.config();
 
 const api = express();
 
-api.options('*', cors())
+api.get("/no-cors", (req, res) => {
+  console.info("GET /no-cors");
+  res.json({
+    text: "You should not see this via a CORS request."
+  });
+});
+// api.options('*', cors())
 // api.use(cors());
 // api.use(cors({
 //     origin: 'https://celadon-llama-ce8ee1.netlify.app',
