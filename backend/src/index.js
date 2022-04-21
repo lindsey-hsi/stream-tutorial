@@ -24,7 +24,7 @@ var api = express();
 //   headers: headers,
 //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 // }
-app.use(cors())
+api.use(cors())
 // app.get('https://celadon-llama-ce8ee1.netlify.app', function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for only example.com.'})
 // })
