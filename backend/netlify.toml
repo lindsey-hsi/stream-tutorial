@@ -1,10 +1,12 @@
-[build]
-  command = "yarn build"
-  functions = "functions"
-  publish = "dist"
-
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT"
+    Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept"
+
+    # Multi-value headers are expressed with multi-line strings.
+  cache-control = '''
+  max-age=86400,
+  private'''
