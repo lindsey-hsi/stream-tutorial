@@ -18,7 +18,7 @@ export const post = (url, body, maybeAuth) => {
     body: JSON.stringify(body),
   })
 
-  console.info(goFetch)
+  console.log(goFetch)
 
   return goFetch.then(res => res.json())
     // return fetch(url, {
