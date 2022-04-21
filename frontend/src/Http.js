@@ -12,20 +12,20 @@ export const post = (url, body, maybeAuth) => {
     headers['Authorization'] = 'Bearer ' + maybeAuth;
   }
 
-  // const goFetch = fetch(url, {
-  //   method: "POST",
-  //   headers: headers,
-  //   body: JSON.stringify(body),
-  // })
-  //
-  // console.info(goFetch)
+  const goFetch = fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify(body),
+  })
 
-  // return goFetch.then(res => res.json())
-    return fetch(url, {
-      // mode: 'no-cors',
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(body),
-    }).then(res => res.json())
+  console.info(goFetch)
+
+  return goFetch.then(res => res.json())
+    // return fetch(url, {
+    //   // mode: 'no-cors',
+    //   method: "POST",
+    //   headers: headers,
+    //   body: JSON.stringify(body),
+    // }).then(res => res.json())
 
 };
