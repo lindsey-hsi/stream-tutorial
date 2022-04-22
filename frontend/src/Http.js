@@ -12,12 +12,14 @@ export const post = (url, body, maybeAuth) => {
     headers['Authorization'] = 'Bearer ' + maybeAuth;
   }
 
+  console.log(body)
   const goFetch = fetch(url, {
     method: "POST",
     headers: headers,
     body: JSON.stringify(body),
   })
 
+  console.log(headers)
   console.log("test message")
   console.log(url)
   console.log(goFetch)
