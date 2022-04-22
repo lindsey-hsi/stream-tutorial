@@ -23,7 +23,7 @@ export const post = (url, body, maybeAuth) => {
   console.log("test message")
   console.log(url)
   console.log(goFetch)
-  console.log(body)
+  console.log(body.toString())
 
   return goFetch.then(res => res.json())
     // return fetch(url, {
