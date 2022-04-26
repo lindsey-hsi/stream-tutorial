@@ -26,6 +26,7 @@ export class StartChat extends PureComponent {
 
   _handleRegister = (event) => {
     event.preventDefault();
+    console.log("about to handle register")
     // to work locally
     // post("http://localhost:8080/v1/authenticate", { sender: this.state.sender })
     // to work on netlify
@@ -33,6 +34,7 @@ export class StartChat extends PureComponent {
     // post(".netlify/functions/node-fetch", { sender: this.state.sender })
       .then(res => res.authToken)
       .then(this._connect);
+    console.log("successfully handled register")
   };
 
   _handleStartChat = async (event) => {
@@ -69,6 +71,7 @@ export class StartChat extends PureComponent {
     // to work locally
     // const response = await post("http://localhost:8080/v1/stream-credentials", {}, backendAuthToken);
     // to work on netlify
+    console.log("about to connect to stream")
     const response = await post("https://animated-froyo-aa2c68.netlify.app/v1/stream-credentials", {}, backendAuthToken);
     const client = new StreamChat(response.apiKey);
     client.setUser(response.user, response.token);
@@ -80,6 +83,7 @@ export class StartChat extends PureComponent {
     // to work locally
     // const response = await post("http://localhost:8080/v1/virgil-credentials", {}, backendAuthToken);
     // to work on netlify
+    console.log("about to connect to virgil")
     const response = await post("https://animated-froyo-aa2c68.netlify.app/v1/virgil-credentials", {}, backendAuthToken);
     const eThree = await EThree.initialize(() => response.token);
     try {
