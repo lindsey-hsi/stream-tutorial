@@ -39,7 +39,7 @@ export class StartChat extends PureComponent {
 
   _handleStartChat = async (event) => {
     event.preventDefault();
-
+    console.log("about to handle start chat")
     try {
       let members = [this.state.sender, this.state.receiver];
       members.sort();
@@ -65,6 +65,7 @@ export class StartChat extends PureComponent {
         this.setState({ error: err.message });
       }
     }
+    console.log("successfully handled start chat")
   };
 
   _connectStream = async (backendAuthToken) => {
@@ -76,7 +77,9 @@ export class StartChat extends PureComponent {
     const client = new StreamChat(response.apiKey);
     client.setUser(response.user, response.token);
 
+    console.log("successfully connected to stream")
     return { ...response, client };
+
   };
 
   _connectVirgil = async (backendAuthToken) => {
@@ -95,7 +98,7 @@ export class StartChat extends PureComponent {
         this.setState({ error: err.message });
       }
     }
-
+    console.log("successfully connected to virgil")
     return { ...response, eThree };
   };
 
