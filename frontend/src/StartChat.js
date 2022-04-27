@@ -30,7 +30,7 @@ export class StartChat extends PureComponent {
     // to work locally
     // post("http://localhost:8080/v1/authenticate", { sender: this.state.sender })
     // to work on netlify
-    post("https://animated-froyo-aa2c68.netlify.app/dist/controlleres/v1/authenticate", { sender: this.state.sender })
+    post("https://animated-froyo-aa2c68.netlify.app/dist/controllers/v1/authenticate", { sender: this.state.sender })
     // post(".netlify/functions/node-fetch", { sender: this.state.sender })
       .then(res => res.authToken)
       .then(this._connect);
