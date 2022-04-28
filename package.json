@@ -1,0 +1,19 @@
+{
+  "name": "stream-encrypted-chat-master",
+  "version": "1.0.0",
+  "description": "As healthcare technology advances, secure real-time communication is becoming increasingly crucial to any modern healthcare application. It's essential to provide the technology experiences patients expect while protecting their privacy and healthcare data. Chat messages often contain protected health information (PHI), so you must consider end-to-end encryption when building chat into your application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindsey-hsi/stream-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lindsey-hsi/stream-tutorial/issues"
+  },
+  "homepage": "https://github.com/lindsey-hsi/stream-tutorial#readme"
+}
