@@ -32,7 +32,7 @@ export class StartChat extends PureComponent {
     // to work on netlify
     // post("https://animated-froyo-aa2c68.netlify.app/controllers/v1/authenticate", { sender: this.state.sender })
     // trying heroku deploy for backend
-    post("https://polar-brook-70189.herokuapp.com/v1/authenticate", { sender: this.state.sender })
+    post("https://polar-brook-70189.herokuapp.com/backend/dist/controllers/v1/authenticate", { sender: this.state.sender })
     // post(".netlify/functions/node-fetch", { sender: this.state.sender })
       .then(res => res.authToken)
       .then(this._connect);
