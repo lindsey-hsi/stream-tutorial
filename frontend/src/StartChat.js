@@ -32,7 +32,7 @@ export class StartChat extends PureComponent {
     // to work on netlify
     // post("https://animated-froyo-aa2c68.netlify.app/controllers/v1/authenticate", { sender: this.state.sender })
     // trying heroku deploy for backend
-    post("https://polar-brook-70189.herokuapp.com/backend/dist/controllers/v1/authenticate", { sender: this.state.sender })
+    post("https://polar-brook-70189.herokuapp.com/../backend/dist/controllers/v1/authenticate", { sender: this.state.sender })
     // post(".netlify/functions/node-fetch", { sender: this.state.sender })
       .then(res => res.authToken)
       .then(this._connect);
@@ -74,7 +74,7 @@ export class StartChat extends PureComponent {
     // to work locally
     // const response = await post("http://localhost:8080/v1/stream-credentials", {}, backendAuthToken);
     // trying heroku deployment
-    const response = await post("https://polar-brook-70189.herokuapp.com/v1/stream-credentials", {}, backendAuthToken);
+    const response = await post("https://polar-brook-70189.herokuapp.com/backend/dist/controllers/v1/stream-credentials", {}, backendAuthToken);
     // to work on netlify
     console.log("about to connect to stream")
     // const response = await post("https://animated-froyo-aa2c68.netlify.app/v1/stream-credentials", {}, backendAuthToken);
@@ -90,7 +90,7 @@ export class StartChat extends PureComponent {
     // to work locally
     // const response = await post("http://localhost:8080/v1/virgil-credentials", {}, backendAuthToken);
     // trying heroku deployment
-    const response = await post("https://polar-brook-70189.herokuapp.com/v1/virgil-credentials", {}, backendAuthToken);
+    const response = await post("https://polar-brook-70189.herokuapp.com/backend/dist/controllers/v1/virgil-credentials", {}, backendAuthToken);
     // to work on netlify
     console.log("about to connect to virgil")
     // const response = await post("https://animated-froyo-aa2c68.netlify.app/v1/virgil-credentials", {}, backendAuthToken);
