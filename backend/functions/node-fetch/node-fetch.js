@@ -3,7 +3,8 @@ const fetch = require('node-fetch')
 const handler = async function () {
   try {
     // const response = await fetch('http://localhost:8080/v1/authenticate', {
-    const response = await fetch('https://animated-froyo-aa2c68.netlify.app/v1/authenticate', {
+    const response = await fetch('https://polar-brook-70189.herokuapp.com/v1/authenticate', {
+    // const response = await fetch('https://animated-froyo-aa2c68.netlify.app/v1/authenticate', {
       headers: { Accept: 'application/json' },
     })
     if (!response.ok) {
