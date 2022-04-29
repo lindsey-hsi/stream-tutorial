@@ -53,10 +53,10 @@ api.use((0, _cors.default)()); // app.get('https://celadon-llama-ce8ee1.netlify.
 api.use((0, _compression.default)());
 api.use((0, _helmet.default)());
 api.use(_bodyParser.default.urlencoded({
-  extended: true
+  extended: false
 }));
 api.use(_bodyParser.default.json());
-api.listen(process.env.PORT, error => {
+api.listen(process.env.PORT || 3000, error => {
   if (error) {
     console.warn(error);
     process.exit(1);

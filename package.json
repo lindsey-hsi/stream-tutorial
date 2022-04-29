@@ -18,7 +18,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "dotenv": "^8.0.0"
   },
   "bugs": {
     "url": "https://github.com/lindsey-hsi/stream-tutorial/issues"
