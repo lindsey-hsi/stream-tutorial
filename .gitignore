@@ -1,2 +1,6 @@
 # Local Netlify folder
 .netlify
+
+# Dependency directories
+node_modules/
+jspm_packages/
