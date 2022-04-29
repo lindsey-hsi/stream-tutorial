@@ -45,7 +45,7 @@ api.use(helmet());
 api.use(bodyParser.urlencoded({ extended: false }));
 api.use(bodyParser.json());
 
-api.listen(process.env.PORT, error => {
+api.listen(process.env.PORT || 3000, error => {
   if (error) {
     console.warn(error);
     process.exit(1);
