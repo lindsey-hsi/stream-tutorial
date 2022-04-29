@@ -61,7 +61,7 @@ typings/
 .next
 
 # computed
-dist/
+# dist/
 
 # osx
 .DS_Store
