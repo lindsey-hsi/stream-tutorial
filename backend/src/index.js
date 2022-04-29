@@ -42,7 +42,7 @@ api.use(cors())
 // }));
 api.use(compression());
 api.use(helmet());
-api.use(bodyParser.urlencoded({ extended: true }));
+api.use(bodyParser.urlencoded({ extended: false }));
 api.use(bodyParser.json());
 
 api.listen(process.env.PORT, error => {
